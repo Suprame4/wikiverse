@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { PagesList } from './PagesList';
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './Layout'
+import Home from './Home'
+import About from './About'
+
 // import and prepend the api url to any fetch calls
 import apiURL from '../api';
 
@@ -23,10 +28,23 @@ export const App = () => {
 	}, []);
 
 	return (
-		<main>	
-      <h1>WikiVerse</h1>
-			<h2>An interesting 📚</h2>
-			<PagesList pages={pages} />
+		<main>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Layout/>}>
+						<Route index element={<Home pages={pages}/>}/>
+						<Route path="about" element={<About/>}/>
+					</Route>
+				</Routes>
+			</BrowserRouter>
+			
 		</main>
+		
 	)
 }
+
+
+
+
+
+
