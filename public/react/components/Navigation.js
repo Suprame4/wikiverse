@@ -9,10 +9,15 @@ const Navigation = () => (
 			</Link>
 		</li>
 		<li>
-			<Link to='/about'>
-				About
+			<Link to='/add'>
+				Add Page
 			</Link>
 		</li>
+        <li>
+            <Link to='/delete'>
+                Delete Page
+            </Link>
+        </li>
 	  </ul>
 	</nav>
   );

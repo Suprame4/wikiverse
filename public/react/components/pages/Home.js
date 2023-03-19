@@ -1,4 +1,4 @@
-import {PagesList} from "./PagesList";
+import PagesList from "../PagesList";
 
 const Home = ({pages}) => (
 	<div className='home'>

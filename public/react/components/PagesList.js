@@ -1,7 +1,7 @@
 import React from 'react';
-import { Page } from './Page';
+import Page from './Page';
 
-export const PagesList = ({pages}) => {
+const PagesList = ({pages}) => {
 	return <>
 		{
 			pages.map((page, idx) => {
@@ -10,3 +10,5 @@ export const PagesList = ({pages}) => {
 		}
 	</>
 } 
+
+export default PagesList;
